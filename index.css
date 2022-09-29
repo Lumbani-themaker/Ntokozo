@@ -1,0 +1,1002 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+/* --------------------------------------------------------------------- Navbar ----------------------------------------------------------------------- */
+#header {
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+nav {
+  width: 95%;
+  height: 10vh;
+  display: none;
+}
+nav .info {
+  width: 95%;
+  height: 90%;
+  position: relative;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+nav .info .contact {
+  width: 400px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+  color: #06465f;
+}
+nav .info .contact h3 {
+  cursor: pointer;
+}
+nav .info .button {
+  width: 100px;
+  height: 30px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  background: #6ddc6d;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid transparent;
+}
+#navbar {
+  width: 95%;
+  position: relative;
+  height: 60px;
+  right: 0px;
+  background: #fff;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /*border: 1px solid red;*/
+}
+#header .logo {
+  width: 10%;
+  height: 40px;
+  position: relative;
+  left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10000;
+  /*border: 1px solid blue;*/
+}
+#header .logo img {
+  width: 40px;
+}
+#header ul {
+  width: 50%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /*border: 1px solid blue;*/
+}
+#header ul li {
+  list-style: none;
+}
+#header ul li a {
+  font-size: 16px;
+  padding: 5px 20px;
+  text-decoration: none;
+  color: #06465f;
+  /*border: 1px solid green;*/
+}
+#header ul li a:hover {
+  color: #099fda;
+  transition: 0.5s;
+}
+/*#header ul li a:visited {
+  color: red;
+}*/
+#header .button {
+  width: 120px;
+  height: 30px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  background: #6ddc6d;
+  border-radius: 25px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+#header .button {
+  color: #fff;
+}
+#header .button:hover {
+  transition: 0.5s;
+  background: #fff;
+  color: #6ddc6d;
+  border: 1px solid #6ddc6d;
+}
+#header .contact {
+  width: 20%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #06465f;
+  /* border: 1px solid green;*/
+}
+#toggle {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #099fda;
+  cursor: pointer;
+  border-radius: 25px;
+  display: none;
+}
+#toggle::before {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  transform: translateY(5px);
+  transition: 0.3s;
+}
+#toggle.active::before {
+  transform: translateY(0px) rotate(45deg);
+}
+#toggle::after {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+#toggle.active::after {
+  transform: translateY(0px) rotate(-45deg);
+}
+#toggle.active {
+  background: #c31636;
+}
+/* --------------------------------------------------------------------- wrapper ------------------------------------------------------------------------- */
+.wrapper {
+  position: relative;
+  top: 0;
+}
+/* --------------------------------------------------------------------- Section-1 ----------------------------------------------------------------------- */
+.section-1 {
+  max-width: 100%;
+  height: 100vh;
+}
+.section-1 .content {
+  width: 85%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* ----------------------------------------------------* Part A *------------------------------------------------------- */
+.section-1 .content .part-A {
+  width: 45%;
+  height: 90%;
+}
+.section-1 .content .part-A .info {
+  width: 95%;
+  height: 60%;
+  display: grid;
+  position: relative;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+.section-1 .content .part-A .info h1 {
+  font-size: 30px;
+  margin-bottom: 3rem;
+}
+.section-1 .content .part-A .info p {
+  margin-bottom: 2rem;
+}
+.section-1 .content .part-A .info .buttons {
+  max-width: 260px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section-1 .content .part-A .info .buttons .button-1 {
+  width: 120px;
+  height: 65%;
+  font-size: 14px;
+  font-weight: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #099fda;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 25px;
+  border: 1px solid transparent;
+}
+.section-1 .content .part-A .info .buttons .button-1:hover {
+  transition: 0.4s;
+  background: #fff;
+  color: #099fda;
+  border: 1px solid #099fda;
+}
+.section-1 .content .part-A .info .buttons .button-2 {
+  width: 120px;
+  height: 65%;
+  font-size: 14px;
+  font-weight: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #099fda;
+  border: 1px solid #099fda;
+  cursor: pointer;
+  border-radius: 25px;
+}
+.section-1 .content .part-A .info .buttons .button-2:hover {
+  transition: 0.4s;
+  color: #fff;
+  background: #099fda;
+  border: 1px solid #099fda;
+}
+/* ----------------------------------------------------* Part B *------------------------------------------------------- */
+.section-1 .content .part-B {
+  width: 55%;
+  height: 90%;
+}
+.section-1 .content .part-B img {
+  width: 90%;
+  position: relative;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+/* --------------------------------------------------------------------- Section-2 ----------------------------------------------------------------------- */
+.section-2 {
+  max-width: 100%;
+  height: 120vh;
+  /*border: 1px solid blue;*/
+}
+.section-2 .content {
+  width: 95%;
+  height: 95%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*border: 1px solid red;*/
+}
+.section-2 .content h1 {
+  text-align: center;
+  font-size: 30px;
+}
+.section-2 .content .info {
+  width: 98%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*border: 1px solid yellow;*/
+}
+.section-2 .content .info h2 {
+  text-align: center;
+  color: #099fda;
+}
+.section-2 .content .info .image {
+  max-width: 250px;
+  height: 150px;
+  /*border: 1px solid green;*/
+}
+.section-2 .content .info .image img {
+  width: 240px;
+  height: 140px;
+}
+.section-2 .content .info .physical-services {
+  width: 50%;
+  height: 98%;
+}
+.section-2 .content .info .physical-services .blocks {
+  width: 95%;
+  height: 90%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, 2fr);
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*background: #ccc;*/
+}
+.section-2 .content .info .technical-services {
+  width: 50%;
+  height: 98%;
+  /* border: 1px solid black;*/
+}
+.section-2 .content .info .technical-services .blocks {
+  width: 95%;
+  height: 90%;
+  display: grid;
+  grid-gap: 10px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(2, 2fr);
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: auto;
+  /*background: khaki;*/
+}
+#box {
+  width: 280px;
+  height: 280px;
+  display: grid;
+  align-items: center;
+  /*border: 1px solid lawngreen;*/
+}
+/* --------------------------------------------------------------------- Section-3 ----------------------------------------------------------------------- */
+.section-3 {
+  max-width: 100%;
+  height: 100vh;
+  /*border: 1px solid red;*/
+}
+.section-3 .content {
+  width: 95%;
+  height: 95%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*border: 1px solid yellow;*/
+}
+.section-3 .content .info {
+  width: 95%;
+  height: 95%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*border: 1px solid blue;*/
+}
+.section-3 .content .info h1 {
+  font-size: 30px;
+  text-align: center;
+}
+.section-3 .content .info .contact-forms {
+  width: 95%;
+  height: 85%;
+  display: grid;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*border: 1px solid greenyellow;*/
+}
+.section-3 .content .info .contact-forms form {
+  width: 50%;
+  height: 90px;
+  display: grid;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  /*border: 1px solid red;*/
+}
+.section-3 .content .info .contact-forms form h4 {
+  font-size: 16px;
+  font-weight: 500;
+}
+.section-3 .content .info .contact-forms form input {
+  width: 90%;
+  height: 90%;
+  font-size: 14px;
+  padding: 8px;
+  color: #06465f;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 2px;
+}
+.section-3 .content .info .contact-forms .custom-select {
+  width: 50%;
+  height: 50px;
+  display: grid;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  /*border: 1px solid blue;*/
+}
+.section-3 .content .info .contact-forms .custom-select h4 {
+  font-size: 16px;
+  font-weight: 500;
+}
+.section-3 .content .info .contact-forms .custom-select .select {
+  width: 70%;
+  height: 90%;
+  outline: none;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.section-3 .content .info .contact-forms .custom-select .select:hover {
+  outline: none;
+  border: 1px solid #858585;
+}
+.section-3 .content .info .contact-forms .custom-select .select option {
+  font-size: 14px;
+  color: #000;
+  background: #fff;
+}
+.section-3 .content .info .contact-forms .textarea {
+  width: 50%;
+  height: 140px;
+  margin-left: auto;
+  margin-right: auto;
+  /*border: 1px solid yellow;*/
+}
+.section-3 .content .info .contact-forms .textarea textarea {
+  width: 70%;
+  height: 100px;
+  color: #06465f;
+  font-size: 14px;
+  resize: none;
+  outline: none;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+.section-3 .content .info .contact-forms .textarea h4 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.section-3 .content .info .contact-forms .sub-btn {
+  width: 50%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.section-3 .content .info .contact-forms .sub-btn .button {
+  width: 100px;
+  height: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  background: #fff;
+  color: #06465f;
+  cursor: pointer;
+  border: 1px solid #06465f;
+}
+.section-3 .content .info .contact-forms .sub-btn .button:hover {
+  transition: 0.5s;
+  color: #fff;
+  background: #06465f;
+  border: 1px solid #06465f;
+}
+/* --------------------------------------------------------------------- Footer -------------------------------------------------------------------------- */
+.footer {
+  max-width: 100%;
+  height: 70vh;
+  background: #000;
+}
+.footer .content {
+  max-width: 95%;
+  height: 90%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*border: 1px solid yellow;*/
+}
+.footer .content .info {
+  max-width: 95%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  color: #c7c5c5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #000;
+}
+.footer .content .info h4 {
+  color: #099fda;
+}
+.footer .content .info a {
+  color: #c7c5c5;
+  text-decoration: none;
+}
+.footer .content .info .address {
+  width: 240px;
+  height: 150px;
+}
+.footer .content .info .address h4 {
+  margin-bottom: 1.8rem;
+}
+.footer .content .info .address .paragraph {
+  margin-top: 5px;
+}
+.footer .content .info .privacy {
+  width: 240px;
+  height: 150px;
+  display: grid;
+}
+.footer .content .info .contact {
+  width: 240px;
+  height: 150px;
+  display: grid;
+}
+.footer .content .info .contact .social-media {
+  width: 30%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /*border: 1px solid green;*/
+}
+.footer .content .info .contact .social-media .bx {
+  font-size: 15px;
+}
+/* --------------------------------------------------------------------- line-footer --------------------------------------------------------------------- */
+.copyright {
+  width: 100%;
+  height: 5vh;
+  background: #000;
+  border-top: 1px solid #c7c5c5;
+}
+.copyright .info {
+  width: 95%;
+  height: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.copyright .info .cp-text {
+  width: 80%;
+  height: 20px;
+  color: #c7c5c5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10px;
+}
+
+/* --*******************************************$--*/
+/* --*******************************************$--*/
+/* --*******************************************$--*/
+/* --*******************************************$--*/
+/* --*******************************************$--*/
+/* --*******************************************$--*/
+/* --*******************************************$--*/
+/* --*******************************************$--*/
+/* --*******************************************$--*/
+/* --*******************************************$--*/
+
+@media only screen and (max-width: 1246px) {
+  /* --*******************************************$--*/
+  /* --*******************************************$--*/
+  /* --------------------------------------------------------------------- Header ----------------------------------------------------------------------- */
+
+  #header #navbar ul {
+    width: 70%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /*border: 1px solid blue;*/
+  }
+  #header .button {
+    display: none;
+  }
+  #header .contact {
+    display: none;
+  }
+  #toggle {
+    display: flex;
+    position: absolute;
+    right: 2px;
+    top: 10px;
+    border-radius: 25px;
+  }
+  #navbar {
+    width: 0px;
+    height: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    transition: 3s;
+    /*border: 1px solid green;*/
+  }
+  #navbar.active {
+    width: 95%;
+    transition: 3s;
+  }
+  nav {
+    height: 10vh;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 10rem;
+    z-index: 500;
+  }
+  nav .info {
+    width: 95%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  nav .info .button:hover {
+    transition: 0.5s;
+    background: #fff;
+    color: #6ddc6d;
+    border: 1px solid #6ddc6d;
+  }
+  nav .info .button {
+    width: 150px;
+    height: 30px;
+  }
+  nav .info .contact {
+    width: 300px;
+    height: 30px;
+    flex-wrap: wrap;
+  }
+  nav .info .contact h4 {
+    cursor: pointer;
+  }
+  /* --------------------------------------------------------------------- wrapper ------------------------------------------------------------------------- */
+  .wrapper {
+    position: relative;
+    top: 3rem;
+  }
+  /* --------------------------------------------------------------------- Section-1 ----------------------------------------------------------------------- */
+  /* --------------------------------------------------------------------- Section-2 ----------------------------------------------------------------------- */
+  .section-2 .content .info {
+    width: 98%;
+    height: 90%;
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .section-2 .content .info .physical-services {
+    width: 98%;
+    height: 98%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .section-2 .content .info .physical-services .blocks {
+    width: 80%;
+    height: 85%;
+  }
+  .section-2 .content .info .physical-services .image {
+    max-width: 300px;
+    height: 180px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*border: 1px solid green;*/
+  }
+  .section-2 .content .info .physical-services .image img {
+    width: 100%;
+    height: 100%;
+  }
+  .section-2 .content .info .technical-header {
+    display: none;
+  }
+  .section-2 .content .info .technical-services {
+    display: none;
+    /*background: khaki;*/
+  }
+  #box {
+    width: 280px;
+    height: 280px;
+    display: grid;
+    align-items: center;
+    justify-content: start;
+    margin-left: auto;
+    margin-right: auto;
+    /*border: 1px solid lawngreen;*/
+  }
+  /* --------------------------------------------------------------------- Section-3 ----------------------------------------------------------------------- */
+  .section-3 .content .info {
+    width: 95%;
+    height: 95%;
+  }
+  .section-3 .content .info .contact-forms {
+    width: 95%;
+    height: 85%;
+  }
+  .section-3 .content .info .contact-forms form {
+    width: 95%;
+    height: 90px;
+  }
+  .section-3 .content .info .contact-forms form h4 {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .section-3 .content .info .contact-forms form input {
+    width: 100%;
+  }
+  .section-3 .content .info .contact-forms .custom-select {
+    width: 95%;
+    height: 50px;
+    /*border: 1px solid blue;*/
+  }
+  .section-3 .content .info .contact-forms .custom-select h4 {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .section-3 .content .info .contact-forms .textarea {
+    width: 95%;
+    height: 160px;
+  }
+  .section-3 .content .info .contact-forms .textarea textarea {
+    width: 70%;
+    height: 120px;
+    color: #06465f;
+  }
+  .section-3 .content .info .contact-forms .sub-btn {
+    width: 95%;
+  }
+  /* --------------------------------------------------------------------- Footer -------------------------------------------------------------------------- */
+  /* --------------------------------------------------------------------- line-footer --------------------------------------------------------------------- */
+  /* --*******************************************$--*/
+  /* --*******************************************$--*/
+  /* --------------------------------------------------------------------- Header ----------------------------------------------------------------------- */
+  @media only screen and (max-width: 768px) {
+    nav .info {
+      width: 95%;
+      height: 100%;
+    }
+    nav .info .button {
+      width: 150px;
+      height: 30px;
+    }
+    nav .info .contact {
+      width: 300px;
+      height: 30px;
+      display: flex;
+    }
+    /* --------------------------------------------------------------------- wrapper ----------------------------------------------------------------------- */
+    /* --------------------------------------------------------------------- Section-1 ----------------------------------------------------------------------- */
+    .section-1 .content {
+      width: 95%;
+      height: 95%;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+    }
+    /* ----------------------------------------------------* Part A *------------------------------------------------------- */
+    .section-1 .content .part-A {
+      width: 95%;
+      height: 90%;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .section-1 .content .part-A .info {
+      width: 95%;
+      height: 65%;
+      text-align: center;
+      display: grid;
+      justify-content: center;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /*border: 1px solid yellow;*/
+    }
+    .section-1 .content .part-A .info h1 {
+      font-size: 28px;
+      margin-bottom: 4rem;
+    }
+
+    .section-1 .content .part-A .info .buttons {
+      max-width: 350px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /*border: 1px solid green;*/
+    }
+    /* ----------------------------------------------------* Part B *------------------------------------------------------- */
+    .section-1 .content .part-B {
+      width: 65%;
+      height: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      /*border: 1px solid black;*/
+    }
+    .section-1 .content .part-B img {
+      width: 90%;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    /* --------------------------------------------------------------------- Section-2 ----------------------------------------------------------------------- */
+    .section-2 .content .info {
+      height: 90%;
+    }
+    .section-2 .content .info .physical-services .blocks {
+      width: 95%;
+      height: 90%;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      grid-gap: 15px;
+      grid-template-columns: repeat(1, 1fr);
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      overflow-x: scroll;
+      text-align: center;
+    }
+    .section-2 .content .info .physical-services .image {
+      width: 100%;
+      height: 180px;
+    }
+    #box {
+      width: 380px;
+      height: 100%;
+      display: grid;
+      grid-gap: 10px;
+      align-items: center;
+      justify-content: start;
+    }
+    /* --------------------------------------------------------------------- Section-3 ----------------------------------------------------------------------- */
+    /* --------------------------------------------------------------------- footer ----------------------------------------------------------------------- */
+    /* --*******************************************$--*/
+    /* --*******************************************$--*/
+    /* --------------------------------------------------------------------- Header ----------------------------------------------------------------------- */
+    @media only screen and (max-width: 588px) {
+      nav {
+        height: 12vh;
+      }
+      nav .info {
+        display: grid;
+      }
+      #header .logo {
+        position: relative;
+        left: 1rem;
+      }
+      #header .logo img {
+        width: 40px;
+      }
+      nav .info {
+        width: 100px;
+        height: 100%;
+      }
+      nav .info .button {
+        width: 150px;
+        height: 30px;
+      }
+      nav .info .contact {
+        width: 99%;
+        height: 70px;
+      }
+      /* --------------------------------------------------------------------- wrapper ----------------------------------------------------------------------- */
+      /* --------------------------------------------------------------------- Section-1 ----------------------------------------------------------------------- */
+      /* --------------------------------------------------------------------- Section-2 ----------------------------------------------------------------------- */
+      /* --------------------------------------------------------------------- Section-3 ----------------------------------------------------------------------- */
+      /* --------------------------------------------------------------------- Footer -------------------------------------------------------------------------- */
+      .footer .content .info {
+        max-width: 95%;
+        height: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        color: #c7c5c5;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #000;
+      }
+      /* --------------------------------------------------------------------- line-footer --------------------------------------------------------------------- */
+
+      /* --*******************************************$--*/
+      /* --*******************************************$--*/
+      /* --------------------------------------------------------------------- Header ----------------------------------------------------------------------- */
+      /* --------------------------------------------------------------------- wrapper ------------------------------------------------------------------------- */
+      /* --------------------------------------------------------------------- Section-1 ----------------------------------------------------------------------- */
+      @media only screen and (max-width: 320px) {
+        .section-1 .content .part-A {
+          position: relative;
+          height: 100%;
+          top: 50%;
+        }
+        .section-1 .content .part-A .info {
+          height: 70%;
+        }
+        .section-1 .content .part-A .info .buttons {
+          height: 100px;
+          display: grid;
+          justify-content: center;
+          align-items: center;
+        }
+
+        /* --------------------------------------------------------------------- Section-2 ----------------------------------------------------------------------- */
+        /* --------------------------------------------------------------------- Section-3 ----------------------------------------------------------------------- */
+        /* --------------------------------------------------------------------- Footer -------------------------------------------------------------------------- */
+        /* --------------------------------------------------------------------- line-footer --------------------------------------------------------------------- */
+      }
+    }
+  }
+
+  /* --*******************************************$--*/
+  /* --*******************************************$--*/
+  /* --------------------------------------------------------------------- Header ----------------------------------------------------------------------- */
+}
